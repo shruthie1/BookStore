@@ -13,11 +13,11 @@ function Navbar() {
       <div className='container navbar-content flex'>
         <div className='brand-and-toggler flex flex-sb'>
           <Link to="/" className='navbar-brand flex'>
-            <span className='fw-7 fs-20 ls-1'>Library</span>
+            <span className='fw-7 fs-20 ls-1'>Find your book of choice.</span>
           </Link>
           <button type="button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size={35} style={{
-              color: `${toggleMenu ? "#000" : "#010101"}`
+              color: `${toggleMenu ? "#000" : "#fff"}`
             }} />
           </button>
         </div>
@@ -29,6 +29,9 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link to="about" className='nav-link fs-22 fw-6 ls-1'>About</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to="cart" className='nav-link fs-22 fw-6 ls-1'>Cart</Link>
             </li>
           </ul>
         </div>

@@ -37,9 +37,12 @@ a {
 
 button {
     outline: 0;
-    border: none;
+    border: 1px #fff;
     font-family: inherit;
-    background-color: transparent;
+    background: #232946;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;;
     cursor: pointer;
 }
 

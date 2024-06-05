@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Booklist.css";
 
-const Book = (book) => {
+const Book = ({ book, addToCart }) => {
+  const [addedBooks, setAddedBooks] = useState({});
+  const [books, setBooks] = useState([]);
+
+  const handleAddToCart = (book) => {
+    addToCart(book);
+    setAddedBooks({ ...addedBooks, [book.key]: true });
+  };
+
   return (
     <div className='book-item flex flex-column flex-sb'>
       <div className='book-item-img'>
@@ -17,7 +25,7 @@ const Book = (book) => {
 
         <div className='book-item-info-item author fs-15'>
           <span className='text-capitalize fw-7'>Author: </span>
-          <span>{book.author.join(", ")}</span>
+          <span>{book?.author?.join(", ")}</span>
         </div>
 
         <div className='book-item-info-item edition-count fs-15'>
@@ -25,10 +33,19 @@ const Book = (book) => {
           <span>{book.edition_count}</span>
         </div>
 
+        <div className='book-item-info-item edition-count fs-15'>
+          <span className='text-capitalize fw-7'>Price: </span>
+          <span>{book.price}₹</span>
+        </div>
+
+
         <div className='book-item-info-item publish-year fs-15'>
           <span className='text-capitalize fw-7'>First Publish Year: </span>
           <span>{book.first_publish_year}</span>
         </div>
+        <button onClick={() => handleAddToCart(book)}>
+          {addedBooks[book.key] ? 'Added' : 'Add to Cart'}
+        </button>
       </div>
     </div>
   )

@@ -1,12 +1,11 @@
 .header-content {
-    min-height: 90vh;
     background: #232946;
     flex-direction: column;
 }
 
-.header-title {
-    font-size: 4.2rem;
-}
+/* .header-title {
+    font-size: 4.2rem; 
+} */
 
 .header-text {
     margin-top: -1.8rem;

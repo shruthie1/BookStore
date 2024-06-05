@@ -4,7 +4,16 @@ import Book from "../Booklist/Book";
 import Loading from "../Loader/Loader";
 import "./Booklist.css";
 
-const BookList = () => {
+function selectOne(array) {
+  if (array.length === 0) {
+    return undefined; // Return undefined if the array is empty
+  }
+
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
+
+const BookList = ({ addToCart }) => {
   const { books, loading, resultTitle } = useGlobalContext();
   const booksWithCovers = books.map((singleBook) => {
     return {
@@ -26,7 +35,7 @@ const BookList = () => {
           {
             booksWithCovers.slice(0, 30).map((item, index) => {
               return (
-                <Book key={index} {...item} />
+                <Book key={index} book={{ ...item, price: selectOne([25, 50, 50, 150]) }} addToCart={addToCart} />
               )
             })
           }

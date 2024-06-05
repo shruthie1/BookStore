@@ -1,10 +1,17 @@
 .navbar {
     padding: 1.8rem 0;
+    background: #232946;
+}
+.navbar a{
+            color: white;
+}
+.navbar h2{
+            color: white;
 }
 
-.navbar-brand {
+/* .navbar-brand {
     width: 90px;
-}
+} */
 
 .navbar-brand span {
     margin-left: 2rem;

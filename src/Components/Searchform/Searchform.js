@@ -30,8 +30,8 @@ const SearchForm = () => {
           <form className='search-form' onSubmit={handleSubmit}>
             <div className='search-form-elem flex flex-sb bg-white'>
               <input type="text" className='form-control' placeholder='The Lost World...' ref={searchText} />
-              <button type="submit" className='flex flex-c' onClick={handleSubmit}>
-                <FaSearch className='icon' size={32} />
+              <button type="submit" style={{ color: 'white' }} className='flex flex-c' onClick={handleSubmit}>
+                <FaSearch className='icon' color='white' size={32} />
               </button>
             </div>
           </form>
