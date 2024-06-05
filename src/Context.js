@@ -1,6 +1,6 @@
 import React, {useState, useContext, useEffect} from 'react';
 import { useCallback } from 'react';
-const URL = "https://openlibrary.org/search.json?title=";
+const URL = "https://openlibrary.org/search.json?limit=5&title=";
 const AppContext = React.createContext();
 
 const AppProvider = ({children}) => {

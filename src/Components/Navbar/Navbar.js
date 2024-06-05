@@ -25,13 +25,13 @@ function Navbar() {
         <div className={toggleMenu ? "navbar-collapse show-navbar-collapse" : "navbar-collapse"}>
           <ul className="navbar-nav">
             <li className='nav-item'>
-              <Link to="book" className='nav-link fs-22 fw-6 ls-1'>Home</Link>
+              <Link to="book" className='nav-link fs-22 fw-6 ls-1' onClick={handleNavbar}>Home</Link>
             </li>
             <li className='nav-item'>
-              <Link to="about" className='nav-link fs-22 fw-6 ls-1'>About</Link>
+              <Link to="about" className='nav-link fs-22 fw-6 ls-1' onClick={handleNavbar}>About</Link>
             </li>
             <li className='nav-item'>
-              <Link to="cart" className='nav-link fs-22 fw-6 ls-1'>Cart</Link>
+              <Link to="cart" className='nav-link fs-22 fw-6 ls-1' onClick={handleNavbar}>Cart</Link>
             </li>
           </ul>
         </div>

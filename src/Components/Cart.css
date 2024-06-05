@@ -1,0 +1,43 @@
+.cart {
+    margin: 20px;
+}
+
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart th, .cart td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.cart th {
+    background-color: #f2f2f2;
+}
+
+.cart .total-price {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cart button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart button:hover {
+    background-color: #45a049;
+}
+
+.cart .qr-code {
+    margin-top: 20px;
+    text-align: center;
+}
